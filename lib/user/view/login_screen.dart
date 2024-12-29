@@ -113,19 +113,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   ),
                 ),
                 TextButton(
-                  onPressed: () async {
-                    final refreshToken =
-                        "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3RAY29kZWZhY3RvcnkuYWkiLCJzdWIiOiJmNTViMzJkMi00ZDY4LTRjMWUtYTNjYS1kYTlkN2QwZDkyZTUiLCJ0eXBlIjoicmVmcmVzaCIsImlhdCI6MTczNTM5MDIzOSwiZXhwIjoxNzM1NDc2NjM5fQ.cqgdrHesT85yRY6ol6OuTEyKRGIOGKpJqWGEda_bH1U";
-
-                    final res = await dio.post(
-                      baseUrl + "auth/token",
-                      options: Options(
-                        headers: {
-                          "authorization": "Bearer $refreshToken",
-                        },
-                      ),
-                    );
-                  },
+                  onPressed: () async {},
                   style: TextButton.styleFrom(),
                   child: Text(
                     "회원가입",
