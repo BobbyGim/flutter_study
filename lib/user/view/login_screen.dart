@@ -69,7 +69,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     String token = stringToBase64.encode(rawString);
 
                     final res = await dio.post(
-                      baseUrl + "auth/login",
+                      baseUrl + "/auth/login",
                       options: Options(
                         headers: {
                           "authorization": "Basic $token",

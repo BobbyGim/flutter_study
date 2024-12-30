@@ -35,12 +35,17 @@ class _SplashScreenState extends State<SplashScreen> {
 
     try {
       final res = await Dio().post(
-        baseUrl + "auth/token",
+        baseUrl + "/auth/token",
         options: Options(
           headers: {
             "authorization": "Bearer $refreshToken",
           },
         ),
+      );
+
+      await storage.write(
+        key: ACCESSE_TOKEN_KEY,
+        value: res.data["accessToken"],
       );
 
       Navigator.of(context).pushAndRemoveUntil(
