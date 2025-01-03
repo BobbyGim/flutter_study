@@ -48,7 +48,7 @@ class RestaurantScreen extends StatelessWidget {
                     final item = snapshot.data![idx];
 
                     final pItem2 = RestaurantModel.fromJson(
-                      json: item,
+                      item,
                     );
 
                     // final pItem = RestaurantModel(

@@ -53,7 +53,7 @@ class _RestaurantDetailScreenState extends State<RestaurantDetailScreen> {
             );
           }
 
-          final item = RestaurantDetailModel.fromJson(json: snapshot.data!);
+          final item = RestaurantDetailModel.fromJson(snapshot.data!);
 
           return CustomScrollView(
             slivers: [
